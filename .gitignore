@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+
+# Node (unused, but safe)
+node_modules/
+.vercel
+
+# Internal source deliverables — DO NOT publish to public repo
+*.pptx
+*.pdf
+*.docx
