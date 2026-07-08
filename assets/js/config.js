@@ -9,5 +9,5 @@
    contactEndpoint: "https://script.google.com/macros/s/AKfycb.../exec"
    ============================================================ */
 window.DVX_CONFIG = {
-  contactEndpoint: ""
+  contactEndpoint: "https://script.google.com/macros/s/AKfycbwkkcZeTP0ZBROxrtnq0u_wrapJS9K38PWNA0YQ3Gvfg01BdioGgnw1ZXs6QNBTzX6G/exec"
 };
