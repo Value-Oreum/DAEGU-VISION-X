@@ -388,14 +388,53 @@
   </main>
 
   <!-- Floating contact CTA (persists across all sections) -->
-  <a class="fab-contact" aria-label="문의 남기기"
-     href='mailto:unboundedvalue@gmail.com,echa.value@gmail.com,dkkim@dkglobalkorea.co.kr?subject=[DAEGU VISION X] 제안 문의&amp;body=안녕하세요, DAEGU VISION X 제안과 관련하여 문의드립니다.%0D%0A%0D%0A· 성함 / 소속:%0D%0A· 연락처:%0D%0A· 문의 내용:%0D%0A'>
+  <button type="button" class="fab-contact" id="contactOpen"
+          aria-haspopup="dialog" aria-controls="contactModal" aria-label="문의 남기기">
     <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
       <path d="M3 5.5h18v13H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
       <path d="M3.5 6.2 12 12.5l8.5-6.3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
     </svg>
     <span class="fab-label">문의 남기기</span>
-  </a>
+  </button>
+
+  <!-- Contact form modal -->
+  <div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="contactTitle" hidden>
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-card">
+      <button type="button" class="modal-close" data-close aria-label="닫기">&times;</button>
+
+      <div class="modal-head">
+        <span class="modal-kicker">Contact</span>
+        <h2 id="contactTitle" class="modal-title">문의 남기기</h2>
+        <p class="modal-sub">아래 내용을 남겨주시면 담당자가 확인 후 연락드립니다. We'll get back to you shortly.</p>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <label>성함 / 소속 <span>Name</span>
+          <input type="text" name="name" required autocomplete="name" placeholder="예) 홍길동 / OO기관" />
+        </label>
+        <label>이메일 <span>Email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+        </label>
+        <label>연락처 <span>Phone</span>
+          <input type="tel" name="phone" required autocomplete="tel" placeholder="010-0000-0000" />
+        </label>
+        <label>문의 내용 <span>Message</span>
+          <textarea name="message" rows="4" required placeholder="문의하실 내용을 입력해주세요."></textarea>
+        </label>
+        <input type="text" name="_hp" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button type="submit" class="btn btn-primary form-submit">보내기 <span>Send</span></button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="form-done" id="formDone" hidden>
+        <div class="done-ic" aria-hidden="true">✓</div>
+        <h3>문의가 접수되었습니다</h3>
+        <p>담당자가 확인 후 빠르게 연락드리겠습니다. Thank you — your inquiry has been received.</p>
+        <button type="button" class="btn btn-ghost" data-close>닫기</button>
+      </div>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="wrap footer-inner">
@@ -407,6 +446,7 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=2" defer></script>
+  <script src="/assets/js/config.js?v=1"></script>
+  <script src="/assets/js/main.js?v=3" defer></script>
 </body>
 </html>
