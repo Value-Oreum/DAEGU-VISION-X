@@ -466,3 +466,30 @@ b,strong{font-weight:700}
   .mini-grid{grid-template-columns:1fr}
   .chips li{font-size:13.5px;padding:8px 15px}
 }
+
+/* ============================================================
+   CAMPUS ALLIANCE (산학협력)
+   ============================================================ */
+.eco-row.uni .eco-actor{color:#0e6e8c;background:#EAF6FA}
+.eco-row.uni .eco-role{background:#F6FBFD}
+
+.campus-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(18px,2.6vw,30px);margin-top:clamp(30px,4vw,44px)}
+.campus-col{background:#fff;border:1px solid var(--line-light);border-radius:var(--radius);
+  padding:clamp(24px,3vw,34px);box-shadow:0 24px 50px -34px rgba(30,50,90,.35);
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.campus-col:hover{transform:translateY(-4px);box-shadow:0 30px 60px -30px rgba(30,50,90,.42)}
+.campus-role{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.03em;
+  color:var(--blue);background:rgba(43,111,240,.08);border-radius:999px;padding:6px 15px;margin-bottom:16px}
+.campus-role.accent{color:#0e6e8c;background:rgba(53,196,240,.13)}
+.campus-col h3{font-size:clamp(1.3rem,2.4vw,1.7rem);color:var(--ink);font-weight:800;line-height:1.2;margin-bottom:18px}
+.campus-col h3 span{display:block;font-size:.46em;font-weight:600;color:var(--ink-soft);letter-spacing:.02em;margin-top:6px}
+.campus-col ul{display:grid;gap:13px}
+.campus-col li{position:relative;padding-left:26px;font-size:15.5px;color:var(--ink);font-weight:600;line-height:1.5}
+.campus-col li em{font-style:normal;font-weight:500;color:var(--ink-soft)}
+.campus-col li::before{content:"";position:absolute;left:3px;top:8px;width:9px;height:9px;border-radius:50%;
+  background:linear-gradient(135deg,var(--cyan),var(--blue))}
+.campus-punch{margin-top:clamp(26px,3.4vw,40px);padding:clamp(22px,2.8vw,30px) clamp(24px,3.2vw,36px);
+  background:linear-gradient(135deg,var(--navy-900),var(--navy-700));color:#fff;border-radius:var(--radius);
+  font-size:clamp(1.02rem,1.7vw,1.18rem);line-height:1.58}
+.campus-punch b{color:#fff}
+@media(max-width:760px){.campus-grid{grid-template-columns:1fr}}
